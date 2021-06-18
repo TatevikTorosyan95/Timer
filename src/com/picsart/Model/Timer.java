@@ -28,19 +28,7 @@ public class Timer implements Runnable {
                 if (j == 0) {
                     sec = 59;
                 }
-                if(i <= 9 && j <= 9) {
-                    System.out.println("0" + i + " : " + "0" + j);
-                }
-                else if (i <= 9) {
-                    System.out.println("0" + i + " : " + j);
-                }
-                else if (j <= 9) {
-                    System.out.println(i + " : " + "0" + j);
-                }
-                else {
-                    System.out.println(i + " : " + j);
-                }
-
+                System.out.printf("%02d:%02d\n", i,j);
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
